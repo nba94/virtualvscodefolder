@@ -30,6 +30,10 @@ namespace testProject
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapGet("/index", async context =>
+                {
+                    await context.Response.WriteAsync("Index");
+                });
                 endpoints.MapGet("/", async context =>
                 {
                     await context.Response.WriteAsync("Hello World!");
